@@ -1,4 +1,3 @@
-package src;
 
 public class Friend {
 	private String name;
