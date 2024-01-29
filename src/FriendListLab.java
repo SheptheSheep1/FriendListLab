@@ -3,17 +3,20 @@ package src;
 import java.util.Scanner;
 public class FriendListLab {
 	public static void main(String[] args) {
+		int choice;
 		//FriendsList friendsList = new FriendsList();
 		FriendsList.defaultFriends();
 		Scanner scanner = new Scanner(System.in);
 		do {
 		printMenu();
-		int choice = scanner.nextInt();
-		FriendsList.fetchChoice(choice);
+		choice = scanner.nextInt();
+		scanner.nextLine();
+		FriendsList.fetchChoice(choice, scanner);
 		} while (FriendsList.userChoice!=9);
 		scanner.close();
 	}
 	public static void printMenu() {
+		System.out.println("\n\n\n");
 		System.out.println("Main Menu");
 		System.out.println("1. Add a friend");
 		System.out.println("2. Delete a friend");
